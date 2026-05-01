@@ -7,7 +7,7 @@ This branch aligns the project with the 2026-04-16 audit:
 - outbound requests now go through a shared server-side policy
 - relay routes are private by default
 - auth throttling is enforced
-- Cloudflare support is Workers/OpenNext, not `next-on-pages`
+- Cloudflare support prefers Workers/OpenNext; `pages:build` remains for legacy Pages Git integrations
 - Apple TV is no longer a supported product target
 - the Android wrapper is TV-only
 - offline support is limited to same-origin shell/static assets
@@ -190,5 +190,5 @@ This repo is expected to stay green on:
 ## Repository Notes
 
 - `npm start` runs the standalone Next.js server output.
-- `pages:build` is kept only as a temporary compatibility alias to the Workers/OpenNext build path.
+- `pages:build` remains a legacy `next-on-pages` compatibility build for existing Cloudflare Pages Git projects.
 - The old Apple TV sample app has been removed from the supported product path on purpose.
